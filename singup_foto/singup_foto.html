@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    function redirectTo(page) {
+        window.location.href = page;
+    }
+
+  document.addEventListener('DOMContentLoaded', (event) => {
+    document.querySelector('.adauga-imagine-NWn').addEventListener('click', function() {
+        document.getElementById('galleryInput').click();
+    });
+
+    document.getElementById('galleryInput').addEventListener('change', function(event) {
+        const file = event.target.files[0];
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            const img = document.createElement('img');
+            img.src = e.target.result;
+            document.getElementById('preview').innerHTML = '';
+            document.getElementById('preview').appendChild(img);
+        };
+        reader.readAsDataURL(file);
+    });
+  });
+
+
+
+</script>
+
+  <meta charset="utf-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <title>406</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Asap+Condensed%3A500"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A500%2C600"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins%3A500%2C600"/>
+  <link rel="stylesheet" href="./styles/.css"/>
+</head>
+<body>
+<div class="item-406-4VY">
+  <div class="rectangle-6-dwx">
+  </div>
+  <div class="devices-amico-vRG">
+    <img class="floor-jGE" src="./assets/floor.png"/>
+    <img class="plants-dcW" src="./assets/plants.png"/>
+    <div class="watch-mCv">
+      <img class="vector-enW" src="./assets/vector-eWW.png"/>
+      <img class="vector-aAN" src="./assets/vector-GV8.png"/>
+      <img class="vector-VYE" src="./assets/vector-hRc.png"/>
+      <img class="vector-SCa" src="./assets/vector-5FY.png"/>
+      <img class="vector-AeN" src="./assets/vector-gxi.png"/>
+      <img class="vector-Hyt" src="./assets/vector-Wsc.png"/>
+      <img class="vector-1ez" src="./assets/vector-Mvi.png"/>
+      <img class="vector-j5C" src="./assets/vector-eFC.png"/>
+      <img class="vector-4NN" src="./assets/vector-ka6.png"/>
+      <img class="vector-CDg" src="./assets/vector-8T4.png"/>
+      <img class="vector-Y2e" src="./assets/vector-SPk.png"/>
+      <img class="vector-5oG" src="./assets/vector.png"/>
+      <img class="vector-DuU" src="./assets/vector-c9g.png"/>
+      <img class="vector-Mkn" src="./assets/vector-1rr.png"/>
+      <p class="item-12-00-6yG">12:00</p>
+    </div>
+    <img class="mobile-kH8" src="./assets/mobile.png"/>
+    <img class="tablet-GWN" src="./assets/tablet.png"/>
+    <img class="laptop-Q6n" src="./assets/laptop.png"/>
+    <img class="computer-94N" src="./assets/computer.png"/>
+    <img class="windows-foQ" src="./assets/windows.png"/>
+  </div>
+  <div class="rectangle-5-nt2">
+  </div>
+  <div class="signin-button-21g">
+    <img class="image-2-738" src="./assets/image-2.png"/>
+  </div>
+  <div class="signin-button-bDC">
+    <div class="rectangle-2-Kut">
+    </div>
+  </div>
+  <div class="title-rup">
+    <p class="scaneaza-qr-cod-AQi">Scaneaza QR cod</p>
+    <p class="de-pe-buletin-fsG">de pe buletin</p>
+    <input type="file" id="galleryInput" style="display: none;" />
+    <button class="adauga-imagine-NWn">Adauga imagine</button>
+  </div>
+  <div class="name-hJA">
+    <div class="auto-group-bkzl-E3C">
+      <p class="nume-M7p">Nume</p>
+      <p class="prenume-5pW">Prenume</p>
+    </div>
+    <div class="auto-group-k2cr-2Ur">
+      <div class="email-yez">
+        <img class="email-vKL" src="./assets/email-wXQ.png"/>
+      </div>
+      <div class="email-eFL">
+        <img class="email-oe2" src="./assets/email.png"/>
+      </div>
+    </div>
+  </div>
+  <div class="email-Xa2">
+    <p class="adresa-email-G1p">Adresa Email</p>
+    <img class="card-ziW" src="./assets/card-Ri2.png"/>
+  </div>
+  <div class="password-Kkn">
+    <p class="parola-FuL">Parola</p>
+    <div class="auto-group-pon2-oAA">
+      <img class="vector-uyt" src="./assets/vector-i6e.png"/>
+      <img class="frame-1434-ega" src="./assets/frame-1434-Xzz.png"/>
+      <div class="strong-kjc">
+        <div class="rectangle-8-fbg">
+        </div>
+        <div class="rectangle-7-aTk">
+        </div>
+        <div class="rectangle-6-gmg">
+        </div>
+        <p class="strong-zGa">Strong</p>
+      </div>
+    </div>
+  </div>
+  <div class="password-5J2">
+    <img class="vector-AaN" src="./assets/vector-hWJ.png"/>
+    <img class="frame-1434-JRg" src="./assets/frame-1434.png"/>
+  </div>
+  <div class="signin-button-2Mg">Inregistrare</div>
+  <p onclick="redirectTo('../singup_manual/singup_manual.html')" style="cursor: pointer;" class="introducere-manuala-ETk">Introducere manuala</p>
+  <p class="item--8p2">&gt;</p>
+</div>
+</body>
