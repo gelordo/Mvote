@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <title>SingUp</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Asap+Condensed%3A500"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A500%2C600"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins%3A500%2C600"/>
+  <link rel="stylesheet" href="./styles/.css"/>
+</head>
+<body>
+<div class="item-406-1zA">
+  <div class="rectangle-6-zr6">
+  </div>
+  <div class="devices-amico-fBY">
+    <img class="floor-kcJ" src="./assets/floor.png"/>
+    <img class="plants-FJA" src="./assets/plants.png"/>
+    <div class="watch-mXQ">
+      <img class="vector-trv" src="./assets/vector-FXY.png"/>
+      <img class="vector-RM4" src="./assets/vector-8c2.png"/>
+      <img class="vector-jMk" src="./assets/vector-Ec2.png"/>
+      <img class="vector-rxA" src="./assets/vector-3Kp.png"/>
+      <img class="vector-QCz" src="./assets/vector-EZ8.png"/>
+      <img class="vector-YKC" src="./assets/vector-L1p.png"/>
+      <img class="vector-4oL" src="./assets/vector-pok.png"/>
+      <img class="vector-ZVC" src="./assets/vector-YWn.png"/>
+      <img class="vector-WQS" src="./assets/vector-S8a.png"/>
+      <img class="vector-TKg" src="./assets/vector-FBY.png"/>
+      <img class="vector-bAz" src="./assets/vector-byk.png"/>
+      <img class="vector-Y6E" src="./assets/vector-zoc.png"/>
+      <img class="vector-fge" src="./assets/vector-svr.png"/>
+      <img class="vector-onr" src="./assets/vector-Ubt.png"/>
+      <p class="item-12-00-YEe">12:00</p>
+    </div>
+    <img class="mobile-mt6" src="./assets/mobile.png"/>
+    <img class="tablet-5dt" src="./assets/tablet.png"/>
+    <img class="laptop-opn" src="./assets/laptop.png"/>
+    <img class="computer-8cA" src="./assets/computer.png"/>
+    <img class="windows-Fgn" src="./assets/windows.png"/>
+  </div>
+  <div class="rectangle-5-aDG">
+  </div>
+  <div class="signin-button-zGz">
+    <div class="rectangle-2-ttA">
+    </div>
+  </div>
+  <div class="title-PK8">
+    <div class="auto-group-3zez-tWn">
+      <p class="de-pe-buletin-pfL">de pe buletin</p>
+      <p class="scaneaza-qr-cod-iEv">Scaneaza QR cod</p>
+    </div>
+    <input type="file" id="imageInput" class="adauga-imagine-1Uv"></button>
+  </div>
+  <div class="name-i8S">
+    <div class="auto-group-6cua-SaE">
+      <p class="nume-7gN">Nume</p>
+      <p class="prenume-3pv">Prenume</p>
+    </div>
+    <div class="auto-group-e9iz-iRG">
+      <div id="decodedData">
+      <input id="namePart" type="email" class="email-GLJ" placeholder="Ceban" readonly>
+      <input id="surnamePart" type="email" class="email-GLJ" placeholder="Ion" readonly></div>
+    </div>
+  </div>
+  <div class="email-5Ye">
+    <p class="adresa-email-PpE">Adresa Email</p>
+    <input type="email" class="username-XQe" placeholder="salut@gmail.com">
+  </div>
+  <div class="password-PBx">
+    <p class="parola-K5c">Parola</p>
+    <div class="auto-group-bs5p-SAE">
+      <img class="vector-jv2" src="./assets/vector.png"/>
+      <input type="password" type="text" class="input-field" placeholder="************">
+      <div class="strong-wmC">
+      </div>
+    </div>
+  </div>
+  <div class="password-6g2">
+    <img class="vector-b6z" src="./assets/vector-e4r.png"/>
+    <input type="password" class="password-input" placeholder="**********" readonly>
+</div>
+<img class="image-2-DeA" src="./assets/image-2.png"/>
+<button class="signin-button-wKG" onclick="uploadAndScanImage()">Inregistrare</button>
+<p class="idnp-ASv">IDNP</p>
+  <div class="continue-with-GVx">
+    <img class="rectangle-3-C8i" src="./assets/rectangle-3.png"/>
+    <p class="continua-cu-YCa">Continua cu</p>
+    <img class="rectangle-4-Fsg" src="./assets/rectangle-4.png"/>
+  </div>
+  <div class="group-1432-NxJ">
+    <div class="buttons-7Q6">
+      <img class="card-GGz" src="./assets/card-UyY.png"/>
+    </div>
+  </div>
+  <div class="msign-removebg-preview-1-Ber">
+  </div>
+  <div id="decodedData">
+  <input id="idPart" type="email" class="username-U8A" placeholder="000000000000000"></div>
+</div>
+
+<script>
+  function uploadAndScanImage() {
+      var input = document.getElementById('imageInput');
+      if (input.files && input.files[0]) {
+          var reader = new FileReader();
+
+          reader.onload = function (e) {
+              var imageData = e.target.result.replace(/^data:image\/(png|jpg|jpeg);base64,/, '');
+              fetch('http://localhost:5000/send-image', {
+                  method: 'POST',
+                  headers: {
+                      'Content-Type': 'application/json',
+                  },
+                  body: JSON.stringify({ base64: imageData }),
+              })
+              .then(response => response.json())
+              .then(data => {
+                  var decodedParts = data.decodedText.split(',');
+                  // Update the input fields with the decoded data
+                  document.getElementById('idPart').value = decodedParts[0];
+                  document.getElementById('namePart').value = decodedParts[1];
+                  document.getElementById('surnamePart').value = decodedParts[2];
+              })
+              .catch(error => {
+                  // Clear the input fields
+                  var inputs = document.getElementById('decodedData').getElementsByTagName('input');
+                  for (var i = 0; i < inputs.length; i++) {
+                      inputs[i].value = '';
+                  }
+              });
+          };function uploadAndScanImage() {
+var input = document.getElementById('imageInput');
+if (input.files && input.files[0]) {
+  var reader = new FileReader();
+
+  reader.onload = function (e) {
+      var imageData = e.target.result.replace(/^data:image\/(png|jpg|jpeg);base64,/, '');
+      fetch('http://localhost:5000/send-image', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ base64: imageData }),
+      })
+      .then(response => response.json())
+      .then(data => {
+          var decodedText = data.decodedText;
+
+          // Process the decoded text to extract individual parts
+          var parts = decodedText.split(',');
+          var idPart = parts[0];
+          var namePart = parts[1];
+          var surnamePart = parts[2];
+
+          // Update the input fields with the decoded data
+          document.getElementById('idPart').value = idPart;
+          document.getElementById('namePart').value = namePart;
+          document.getElementById('surnamePart').value = surnamePart; 
+      })
+      .catch(error => {
+          // Clear the input fields
+          var inputs = document.getElementById('decodedData').getElementsByTagName('input');
+          for (var i = 0; i <= inputs.length; i++) {
+              inputs[i].value = '';
+          }
+      });
+  };
+
+  reader.readAsDataURL(input.files[0]);
+}
+}
+
+          reader.readAsDataURL(input.files[0]);
+      }
+  }
+
+  
+</script>
+
+</body>
