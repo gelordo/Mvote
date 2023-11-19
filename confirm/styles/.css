@@ -1,0 +1,142 @@
+
+html {
+	font-size:62.5%;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+ul, li {
+	list-style: none;
+}
+input {
+	border: none;
+}
+body {
+  width: 36rem;
+}.item-410-SH8 {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(91, 130, 145, 0.5);
+}
+.item-410-SH8 .auto-group-gvsc-oWz {
+  width: 100%;
+  height: 22rem;
+  position: relative;
+  flex-shrink: 0;
+}
+.item-410-SH8 .auto-group-gvsc-oWz .image-3-Rwg {
+  width: 12.9rem;
+  height: 17rem;
+  position: relative;
+  left: 24.3rem;
+  top: 0.5rem;
+  background-size: 268.359% 106.14%;
+  background-position: -19.9043rem -1.0439rem;
+  background-image: url('../assets/image-3.png');
+}
+.item-410-SH8 .auto-group-gvsc-oWz .rectangle-5-Sbt {
+  width: 38.8rem;
+  height: 22rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.200000003);
+  border-radius: 5rem;
+}
+.item-410-SH8 .auto-group-gvsc-oWz .image-4-LhG {
+  width: 4.1rem;
+  height: 4.1rem;
+  position: absolute;
+  left: 2.6rem;
+  top: 2.6rem;
+  object-fit: cover;
+  vertical-align: top;
+}
+.item-410-SH8 .auto-group-gvsc-oWz .title-fDk {
+  width: 24.8rem;
+  height: 3.6rem;
+  position: absolute;
+  left: 5.45rem;
+  top: 15.7rem;
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #000000;
+  font-family: Poppins, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.item-410-SH8 .auto-group-gvsc-oWz .line-1-jUW {
+  width: 26.8011rem;
+  height: 0.1rem;
+  position: absolute;
+  left: 1.2992rem;
+  top: 7.5003rem;
+  background-color: #fef4f4;
+}
+.item-410-SH8 .auto-group-gvsc-oWz .mvote-S82 {
+  width: 7.6rem;
+  height: 3.6rem;
+  position: absolute;
+  left: 7.5rem;
+  top: 3.3rem;
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #000000;
+  font-family: Poppins, 'Source Sans Pro';
+  white-space: nowrap;
+}
+.item-410-SH8 .auto-group-gvsc-oWz .comisia-electorala-centrala-a-republicii-moldova-KBp {
+  width: 17.3rem;
+  height: 3.6rem;
+  position: absolute;
+  left: 6.85rem;
+  top: 8.5rem;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #000000;
+  font-family: Poppins, 'Source Sans Pro';
+}
+.item-410-SH8 .auto-group-8hln-adY {
+  box-sizing: border-box;
+  padding: 7.9rem 0rem 9.8rem 0rem;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.item-410-SH8 .auto-group-8hln-adY .image-6-Uyp {
+  margin: 0rem 0rem 10.3rem 0.1rem;
+  width: 21.9rem;
+  height: 23.1rem;
+  object-fit: cover;
+  vertical-align: top;
+  flex-shrink: 0;
+}
+.item-410-SH8 .auto-group-8hln-adY .frame-440-C98 {
+  margin-right: 1rem;
+  width: 35.1rem;
+  height: 8.9rem;
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: rgba(11, 11, 11, 0.8799999952);
+  font-family: Poppins, 'Source Sans Pro';
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.2199999988);
+  border-radius: 2rem;
+  flex-shrink: 0;
+}
