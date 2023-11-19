@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <title>408</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A500%2C600"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins%3A500%2C600"/>
+  <link rel="stylesheet" href="./styles/.css"/>
+</head>
+<body>
+<div class="item-408-7rA">
+  <div class="auto-group-gni6-UKL">
+    <div class="image-3-5rr">
+    </div>
+    <div class="rectangle-5-ah8">
+    </div>
+    <img class="image-4-cNv" src="./assets/image-4.png"/>
+    <p class="title-JWe">Buletin de vot Online</p>
+    <div class="line-1-J9G">
+    </div>
+    <p class="mvote-jEa">Mvote</p>
+    <p class="comisia-electorala-centrala-a-republicii-moldova-NHY">Comisia Electorala Centrala a Republicii Moldova</p>
+  </div>
+  <div class="auto-group-3xhc-yo8">
+    <div class="auto-group-6ygn-mU6">
+      <div class="frame-434-bxv">
+        <div class="image-removebg-preview-12-GpA">
+        </div>
+        <p class="gary-lee-iZg">PARTIDUL POLITIC PARTIDUL VERDE ECOLOGIST</p>
+        <img class="ellipse-79-mnr" src="./assets/ellipse-79.png"/>
+      </div>
+    </div>
+    <div class="auto-group-7gmg-qXp">
+      <div class="frame-440-Mea">
+        <div class="frame-434-PbG">
+          <img class="logout-rjk" src="./assets/logout.png"/>
+          <p class="gary-lee-xnn" onclick="redirectTo('../voting/voting.html')" style="cursor: pointer;">Inapoi</p>
+        </div>
+      </div>
+      <div class="frame-439-iBc">
+        <div class="frame-434-dZU">
+          <p class="gary-lee-aUi" onclick="redirectTo('../confirm/confirm.html')" style="cursor: pointer;">Confirmare</p>
+          <img class="logout-JvW" src="./assets/logout-wy4.png"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+// Получить сохраненный текст из localStorage
+var selectedParty = localStorage.getItem('selectedParty');
+
+// Убедиться, что текст был получен
+// if (selectedParty) {
+    // Найти элемент <p> с классом 'gary-lee-iZg' и установить в него текст
+    var pElement = document.querySelector('.gary-lee-iZg');
+    if (pElement) {
+        pElement.textContent = selectedParty;
+    }
+// }
+
+function redirectTo(page) {
+        window.location.href = page;
+    }
+
+</script>
+</body>
